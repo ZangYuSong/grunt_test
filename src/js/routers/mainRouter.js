@@ -7,7 +7,7 @@ define(['app'], function (app) {
                     url: '/index',
                     views: {
                         '': {
-                            templateUrl: 'js/tpl/login.html',
+                            templateUrl: 'tpl/login.html',
                             resolve: {
                                 loadFile: app.loadFile("controllers/loginController")
                             }
@@ -16,18 +16,20 @@ define(['app'], function (app) {
                 })
                 .state('bookList', {
                     url: '/bookList',
+                    // 声明接收的参数，否则会过滤掉
+                    params: {'bookType': null},
                     views: {
                         '': {
-                            templateUrl: 'js/tpl/bookList.html'
+                            templateUrl: 'tpl/bookList.html'
                         },
                         'bookType@bookList': {
-                            templateUrl: 'js/tpl/bookType.html',
+                            templateUrl: 'tpl/bookType.html',
                             resolve: {
                                 loadFile: app.loadFile("controllers/bookTypeController")
                             }
                         },
                         'bookGrid@bookList': {
-                            templateUrl: 'js/tpl/bookGrid.html'
+                            templateUrl: 'tpl/bookGrid.html'
                         }
                     }
                 });
