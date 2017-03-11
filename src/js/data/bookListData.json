@@ -1,0 +1,30 @@
+[
+  {
+    "title": "精通AngularJS",
+    "putTime": "2016年04月",
+    "price": 79.00,
+    "author": "Pawel Kozlowski & Peter Bacon Darwin",
+    "type": "1"
+  },
+  {
+    "title": "JavaScript设计模式",
+    "putTime": "2016年06月",
+    "price": 49.00,
+    "author": "Addy Osmani",
+    "type": "1"
+  },
+  {
+    "title": "投资理财从入门到精通",
+    "putTime": "2017年01月",
+    "price": 41.00,
+    "author": "墨知行",
+    "type": "3"
+  },
+  {
+    "title": "科学全知道（全30册)",
+    "putTime": "2013年03月",
+    "price": 240.00,
+    "author": "[美]弗兰·马努斯基，[美]珍妮弗·达斯林",
+    "type": "2"
+  }
+]

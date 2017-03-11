@@ -10,7 +10,7 @@ require.config({
     paths: {
         'angular': '../framework/angular-1.4.6/angular.min',
         'uiRouter': '../framework/angular-ui-router/ui-router',
-        'ngGrid': '../framework/angular-ui-grid/ui-grid.min',
+        'uiGrid': '../framework/angular-ui-grid/ui-grid.min',
         'bootstrap': '../framework/bootstrap-3.3.7-dist/js/bootstrap.min',
         'jquery': '../framework/jquery-1.11.3/jquery'
     },
@@ -21,14 +21,16 @@ require.config({
             exports: 'angular'
         },
         'uiRouter': {
-            deps: ['angular'], // angular-ui-router-router 依赖 angular
-            exports: 'uiRouter'
+            deps: ['angular'] // angular-ui-router-router 依赖 angular
         },
         'bootstrap': {
             deps: ['jquery', 'css!../framework/bootstrap-3.3.7-dist/css/bootstrap.min']
         },
-        'ngGrid': {
-            deps: ['css!../framework/angular-ui-grid/ui-grid.min']
+        'uiGrid': {
+            deps: ['angular', 'css!../framework/angular-ui-grid/ui-grid.min']
+        },
+        'oclazyLoad': {
+            deps: ['angular']
         }
     },
     // RequireJS获取资源时附加在URL后面的额外的query参数

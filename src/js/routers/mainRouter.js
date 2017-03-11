@@ -31,7 +31,7 @@ define(['app'], function (app) {
                         'bookGrid@bookList': {
                             templateUrl: 'tpl/bookGrid.html',
                             resolve: {
-                                loadFile: app.loadFile(["ngGrid", "controllers/bookGridController"])
+                                loadFile: app.loadFile(["uiGrid", "controllers/bookGridController"])
                             }
                         }
                     }
