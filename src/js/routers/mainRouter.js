@@ -29,7 +29,10 @@ define(['app'], function (app) {
                             }
                         },
                         'bookGrid@bookList': {
-                            templateUrl: 'tpl/bookGrid.html'
+                            templateUrl: 'tpl/bookGrid.html',
+                            resolve: {
+                                loadFile: app.loadFile(["ngGrid", "controllers/bookGridController"])
+                            }
                         }
                     }
                 });

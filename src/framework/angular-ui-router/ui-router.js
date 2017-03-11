@@ -295,7 +295,7 @@ if (typeof module !== "undefined" && typeof exports !== "undefined" && module.ex
      * <head>
      *   <script src="js/angular.js"></script>
      *   <!-- Include the ui-router script -->
-     *   <script src="js/angular-ui-router.min.js"></script>
+     *   <script src="js/angular-ui-router-router.min.js"></script>
      *   <script>
      *     // ...and add 'ui.router' as a dependency
      *     var myApp = angular.module('myApp', ['ui.router']);

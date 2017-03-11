@@ -1,4 +1,4 @@
 <div class="list-group" ng-controller="bookTypeController">
     <a class="list-group-item active">书籍类型</a>
-    <a ng-repeat="bookTypeData in bookTypeDatas" class="list-group-item" ui-sref="bookType:{{bookTypeData.id}}">{{bookTypeData.title}}</a>
+    <a ng-repeat="bookTypeData in bookTypeDatas" class="list-group-item" ui-sref="bookList({bookType:bookTypeData.id})">{{bookTypeData.title}}</a>
 </div>
