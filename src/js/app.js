@@ -1,5 +1,6 @@
 define(['uiGrid', 'uiRouter'], function () {
-    var app = angular.module('BookStore', ['ui.router', 'ui.grid', 'ui.grid.pagination', 'ui.grid.selection']);
+    var app = angular.module('BookStore', ['ui.router', 'ui.grid', 'ui.grid.pagination', 'ui.grid.selection',
+        'ui.grid.exporter', 'ui.grid.importer']);
     app.config(['$controllerProvider', '$compileProvider', '$filterProvider', '$provide',
         function ($controllerProvider, $compileProvider, $filterProvider, $provide) {
             // angular有个启动函数，叫做bootstrap；

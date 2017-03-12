@@ -15,9 +15,9 @@ define(['app'], function (app) {
                     }
                 })
                 .state('bookList', {
-                    url: '/bookList',
+                    url: '/{bookType:[0-9]}',
                     // 声明接收的参数，否则会过滤掉
-                    params: {'bookType': null},
+                    // params: {'bookType': null},
                     views: {
                         '': {
                             templateUrl: 'tpl/bookList.html'

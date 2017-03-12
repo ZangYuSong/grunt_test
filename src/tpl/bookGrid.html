@@ -1,3 +1,9 @@
 <div class="row" ng-controller="bookGridController">
-    <div class="ui-grid" ui-grid="gridOptions" ui-grid-pagination ui-grid-selection></div>
+    <input class="btn btn-toolbar" ng-click="add()" value="新增" type="button">&nbsp;
+    <input class="btn btn-toolbar" ng-click="info()" value="详情" type="button">&nbsp;
+    <input class="btn btn-toolbar" ng-click="del()" value="删除" type="button">&nbsp;
+    <br>
+    <br>
+    <div class="ui-grid" ui-grid="gridOptions" ui-grid-pagination ui-grid-selection
+         ui-grid-exporter ui.grid.importer></div>
 </div>

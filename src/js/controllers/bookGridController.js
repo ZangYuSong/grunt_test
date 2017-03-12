@@ -27,12 +27,28 @@ define(['services/loadService'], function (app) {
                     $scope.bookListData = _filterData(data);
                     $scope.totalItems = data.length;
                 });
+
+            $scope.info = function () {
+                if ($scope.gridApi.selection.getSelectedCount() !== 1) {
+                    alert('请选择一条信息');
+                } else {
+                    alert($scope.gridApi.selection.getSelectedRows()[0].title);
+                }
+            };
+            $scope.del = function () {
+                if ($scope.gridApi.selection.getSelectedCount() === 0) {
+                    alert('请选择至少一条信息');
+                } else {
+                    alert($scope.gridApi.selection.getSelectedRows()[0].title);
+                }
+            };
             $scope.gridOptions = {
                 data: 'bookListData',
                 enableGridMenu: true, // 是否显示grid 菜单
                 showGridFooter: true, // 是否显示grid footer
                 enableHorizontalScrollbar: 1, // grid水平滚动条是否显示, 0-不显示  1-显示
                 enableVerticalScrollbar: 0, // grid垂直滚动条是否显示, 0-不显示  1-显示
+                enableSorting: true,   // 允许排序
                 /**
                  * 默认为真。启用时初始化的网格将检查它是否高到足以显示。
                  * 至少一排数据。如果网格是不够高，它会调整DOM元素来显示minrowstoshow数行。
@@ -69,14 +85,14 @@ define(['services/loadService'], function (app) {
                 noUnselect: false,// 默认false,选中后可以取消选中
                 selectionRowHeaderWidth: 30,//默认30 ，设置选择列的宽度；
 
+                enableFiltering: true, // 开启过滤，对每一列进行过滤
                 columnDefs: [
                     {
                         field: 'index',
                         displayName: '序号',
                         width: 70,
                         enableColumnMenu: false,// 是否显示列头部菜单按钮
-                        sortable: false,
-                        pinnable: false
+                        enableSorting: false
                     },
                     {
                         field: 'title',
@@ -95,7 +111,10 @@ define(['services/loadService'], function (app) {
                         displayName: '单价',
                         cellFilter: 'currency:"￥"'
                     }
-                ]
+                ],
+                onRegisterApi: function (gridApi) {
+                    $scope.gridApi = gridApi;
+                }
             };
         }]);
 });
