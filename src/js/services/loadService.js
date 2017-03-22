@@ -14,7 +14,7 @@ define(['app'], function (app) {
                 request: function (url) {
                     return _request(url);
                 }
-            }
+            };
         }
     ]);
     return app;

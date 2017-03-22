@@ -21,7 +21,11 @@ define(['uiGrid', 'uiRouter'], function () {
                 return function ($rootScope, $q) {
                     //通过$q服务注册一个延迟对象 deferred
                     var def = $q.defer(), deps = [];
-                    angular.isArray(js) ? (deps = js) : deps.push(js);
+                    if (angular.isArray(js)) {
+                        deps = js;
+                    } else {
+                        deps.push(js);
+                    }
                     require(deps, function () {
                         $rootScope.$apply(function () {
                             // 成功

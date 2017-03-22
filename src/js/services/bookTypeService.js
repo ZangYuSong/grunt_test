@@ -12,7 +12,7 @@ define(['app'], function (app) {
                 setType: function (bookType) {
                     this._bookType = bookType;
                 }
-            }
+            };
         }
     ]);
     return app;

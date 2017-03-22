@@ -22,6 +22,6 @@ define(['app'], function (app) {
                     password: '',
                     checkout: false
                 };
-            }
+            };
         }]);
 });

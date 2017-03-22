@@ -12,7 +12,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 // 将要被合并的文件
-                src: ['src/**/*.js'],
+                src: ['src/js/**/*.js'],
                 // 合并后的JS文件的存放位置
                 dest: 'dist/<%= pkg.name %>.js'
             }
@@ -34,7 +34,7 @@ module.exports = function (grunt) {
 
         // jshint 插件配置信息，检查 javascript 语法
         jshint: {
-            files: ['src/**/*.js', 'test/**/*.js']
+            files: ['src/js/**/*.js', 'test/**/*.js']
         },
 
         // watch 插件的配置信息，检测文件的变化

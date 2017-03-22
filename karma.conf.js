@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Tue Mar 07 2017 20:57:51 GMT+0800 (中国标准时间)
+// Generated on Mon Mar 13 2017 19:08:43 GMT+0800 (中国标准时间)
 
 module.exports = function (config) {
     config.set({
@@ -10,38 +10,30 @@ module.exports = function (config) {
 
         // frameworks to use
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-        frameworks: ['jasmine'],
+        frameworks: ['jasmine', 'requirejs'],
 
 
         // list of files / patterns to load in the browser
         files: [
-            'src/**/*.js',
-            'test/**/*.js'
+            'test-main.js',
+            {pattern: 'src/**/*', included: false},
+            {pattern: 'test/**/*Spec.js', included: false}
         ],
 
 
         // list of files to exclude
-        exclude: ['karma.conf.js'],
+        exclude: [],
 
 
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-        preprocessors: {
-            'src/**/*.js': 'coverage'
-        },
+        preprocessors: {},
 
 
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: ['progress', 'coverage'],
-
-
-        // 添加coverageReporter节点，将覆盖率报告类型type设置为html，输入目录dir指定到你希望的目录中
-        coverageReporter: {
-            type: 'html',
-            dir: 'coverage/'
-        },
+        reporters: ['progress'],
 
 
         // web server port
